@@ -62,12 +62,60 @@
             </div>
 
             <div class="col-xxl-7">
-                <!-- Header profile picture-->
-                <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                    <div class="profile  ">
-                        <img class="profile-img" src="assets/10276612_4421964.jpg" alt="Network probleme">
-                    </div>
-                </div>
+            <!-- Header profile video -->
+<!-- Header profile video -->
+<div class="d-flex justify-content-center align-items-center mt-5 mt-xxl-0">
+  <div class="profile-video-wrapper" style="max-width: 800px; width: 100%; margin-top: 10%;">
+    <video
+      class="profile-video"
+      src="assets/video.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+    ></video>
+  </div>
+</div>
+
+<!-- Styling -->
+<style>
+  .profile-video-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .profile-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .profile-video {
+      transition: none !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .profile-video-wrapper {
+      margin-top: 20%;
+      padding: 0 10px;
+    }
+  }
+</style>
+
+
+
             </div>
         </div>
     </div>
